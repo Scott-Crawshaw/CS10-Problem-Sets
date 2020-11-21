@@ -1,0 +1,9 @@
+/**
+ * May 27th 2019
+ * PS-6
+ * 
+ * @author Scott Crawshaw
+ * @author Kunaal Verma
+ */
+ 
+ In a multi-client system, there is always potential for a-synchronized behavior leading to erradic behavior. In order to solve this problem, we used the synchronize tag on many of our functions. This tag solves this issue by only allowing a single client into a given function at one time, ensuring that tasks are completed before others are started. In the case of the SketchServer, this is incredibly important, for one cannot let two EditorCommunicators hit the same sketch server at the same time. The server needs to receive a message, process it, and broadcast the result before it can handle another message.
